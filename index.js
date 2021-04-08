@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-const port = 5000;
 
 const durakRouter = require("./routes/durak");
 const filoRouter = require("./routes/filo");
@@ -18,7 +17,7 @@ app.use("/", duyurularRouter);
 app.use("/", filoHatRouter);
 app.use("/", garajRouter);
 
-app.listen(port, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
 
