@@ -8,7 +8,8 @@ durak.get("/api/durak", (req, res) => {
   let args = { DurakKodu: "" };
   soap.createClient(url, (err, client) => {
     client.GetDurak_json(args, (err, result) => {
-      res.json(JSON.parse(result.GetDurak_jsonResult));
+      // res.json(JSON.parse(result.GetDurak_jsonResult));
+      console.log(JSON.parse(result.GetDurak_jsonResult));
     });
   });
 });

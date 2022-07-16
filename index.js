@@ -19,6 +19,7 @@ app.use("/", garajRouter);
 
 app.listen(process.env.PORT || 3000, () => {
   console.log(`Hello World!`);
+  // console.log(app.get("/api/durak"));
 });
 
 module.exports = app;
